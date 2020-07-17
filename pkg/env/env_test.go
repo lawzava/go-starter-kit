@@ -1,13 +1,14 @@
-package env
+package env_test
 
 import (
+	"goapp/pkg/env"
 	"os"
 	"testing"
 )
 
 func TestString(t *testing.T) {
 	tt := []struct {
-		in  EnvironmentVariable
+		in  env.EnvironmentVariable
 		out string
 	}{
 		{"TEST", "TEST"},
@@ -22,7 +23,7 @@ func TestString(t *testing.T) {
 
 func TestGetOr(t *testing.T) {
 	tt := []struct {
-		in  EnvironmentVariable
+		in  env.EnvironmentVariable
 		out string
 	}{
 		{"TEST", "VAR"},
